@@ -67,7 +67,7 @@ function Item(unserialize = {}, onUpdate, onDelete, onEscape, onDragStart) {
         input = autoScalingTextarea(textarea => inputArea = textarea
             .classes("todo-item-text")
             .attrs({
-                placeholder: "empty task",
+                placeholder: "пустая задача",
                 spellcheck: "false"
             })
             .on("keydown", (e) => {
@@ -195,7 +195,7 @@ function Todo(id) {
                 input = autoScalingTextarea(textarea => inputArea = textarea
                     .on("keydown", handleInputKeyDown)
                     .attrs({
-                        placeholder: "Add a task",
+                        placeholder: "Добавить задачу",
                         spellcheck: "false"
                     })
                 ).classes("grow", "min-width-0")

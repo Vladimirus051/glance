@@ -26,11 +26,11 @@ const state = {
 };
 
 const lang = {
-    showPassword: "Show password",
-    hidePassword: "Hide password",
-    incorrectCredentials: "Incorrect username or password",
-    rateLimited: "Too many login attempts, try again in a few minutes",
-    unknownError: "An error occurred, please try again",
+    showPassword: "Показать пароль",
+    hidePassword: "Скрыть пароль",
+    incorrectCredentials: "Неверное имя пользователя или пароль",
+    rateLimited: "Слишком много попыток входа. Попробуйте снова через несколько минут",
+    unknownError: "Произошла ошибка. Попробуйте ещё раз",
 };
 
 container.clearStyles("display");

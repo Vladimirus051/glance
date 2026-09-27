@@ -85,7 +85,7 @@ function Header(nextClicked, prevClicked, undoClicked) {
         undo = button()
             .hide()
             .classes("calendar-undo-button")
-            .attr("title", "Back to current month")
+            .attr("title", "Вернуться к текущему месяцу")
             .on("click", undoClicked)
             .html(undoArrowSvg)
     );
@@ -94,14 +94,14 @@ function Header(nextClicked, prevClicked, undoClicked) {
         .classes("flex", "gap-7", "items-center")
         .append(
             button()
-                .attr("title", "Previous month")
+                .attr("title", "Предыдущий месяц")
                 .on("click", prevClicked)
                 .html(leftArrowSvg),
             monthNumber = elem()
                 .classes("color-highlight")
                 .styles({ marginTop: "0.1rem" }),
             button()
-                .attr("title", "Next month")
+                .attr("title", "Следующий месяц")
                 .on("click", nextClicked)
                 .html(rightArrowSvg),
         );
