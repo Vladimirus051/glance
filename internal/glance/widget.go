@@ -242,7 +242,7 @@ func (w *widgetBase) renderTemplate(data any, t *template.Template) template.HTM
 
 func (w *widgetBase) withTitle(title string) *widgetBase {
 	if w.Title == "" {
-		w.Title = title
+		w.Title = translateDefaultTitle(title)
 	}
 
 	return w

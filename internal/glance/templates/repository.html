@@ -9,7 +9,7 @@
 
 {{ if gt (len .Repository.Commits) 0 }}
 <hr class="margin-block-8">
-<a class="text-compact" href="https://github.com/{{ $.Repository.Name }}/commits" target="_blank" rel="noreferrer">Last {{ .CommitsLimit }} commits</a>
+<a class="text-compact" href="https://github.com/{{ $.Repository.Name }}/commits" target="_blank" rel="noreferrer">Последние коммиты: {{ .CommitsLimit }}</a>
 <div class="flex gap-7 size-h5 size-base-on-mobile margin-top-3">
     <ul class="list list-gap-2">
         {{ range .Repository.Commits }}
@@ -26,7 +26,7 @@
 
 {{ if gt (len .Repository.PullRequests) 0 }}
 <hr class="margin-block-8">
-<a class="text-compact" href="https://github.com/{{ $.Repository.Name }}/pulls" target="_blank" rel="noreferrer">Open pull requests ({{ .Repository.OpenPullRequests | formatNumber }} total)</a>
+<a class="text-compact" href="https://github.com/{{ $.Repository.Name }}/pulls" target="_blank" rel="noreferrer">Открытые pull request ({{ .Repository.OpenPullRequests | formatNumber }})</a>
 <div class="flex gap-7 size-h5 size-base-on-mobile margin-top-3">
     <ul class="list list-gap-2">
         {{ range .Repository.PullRequests }}
@@ -43,7 +43,7 @@
 
 {{ if gt (len .Repository.Issues) 0 }}
 <hr class="margin-block-10">
-<a class="text-compact" href="https://github.com/{{ $.Repository.Name }}/issues" target="_blank" rel="noreferrer">Open issues ({{ .Repository.OpenIssues | formatNumber }} total)</a>
+<a class="text-compact" href="https://github.com/{{ $.Repository.Name }}/issues" target="_blank" rel="noreferrer">Открытые задачи ({{ .Repository.OpenIssues | formatNumber }})</a>
 <div class="flex gap-7 size-h5 size-base-on-mobile margin-top-3">
     <ul class="list list-gap-2">
         {{ range .Repository.Issues }}

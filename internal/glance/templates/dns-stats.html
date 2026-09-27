@@ -5,21 +5,21 @@
     <div class="flex text-center justify-between dns-stats-totals">
         <div>
             <div class="color-highlight size-h3">{{ .Stats.TotalQueries | formatNumber }}</div>
-            <div class="size-h6">QUERIES</div>
+            <div class="size-h6">ЗАПРОСЫ</div>
         </div>
         <div>
             <div class="color-highlight size-h3">{{ .Stats.BlockedPercent }}%</div>
-            <div class="size-h6">BLOCKED</div>
+            <div class="size-h6">ЗАБЛОКИРОВАНО</div>
         </div>
         {{ if gt .Stats.ResponseTime 0 }}
         <div>
             <div class="color-highlight size-h3">{{ .Stats.ResponseTime | formatNumber }}ms</div>
-            <div class="size-h6">LATENCY</div>
+            <div class="size-h6">ЗАДЕРЖКА</div>
         </div>
         {{ else }}
-        <div class="cursor-help" data-popover-type="text" data-popover-text="Total number of blocked domains from all adlists" data-popover-max-width="200px" data-popover-text-align="center">
+        <div class="cursor-help" data-popover-type="text" data-popover-text="Общее количество заблокированных доменов из всех списков блокировки" data-popover-max-width="200px" data-popover-text-align="center">
             <div class="color-highlight size-h3">{{ .Stats.DomainsBlocked | formatApproxNumber }}</div>
-            <div class="size-h6">DOMAINS</div>
+            <div class="size-h6">ДОМЕНЫ</div>
         </div>
         {{ end }}
     </div>
@@ -46,11 +46,11 @@
                     <div class="flex text-center justify-between gap-25">
                         <div>
                             <div class="color-highlight size-h3">{{ $column.Queries | formatNumber }}</div>
-                            <div class="size-h6">QUERIES</div>
+                            <div class="size-h6">ЗАПРОСЫ</div>
                         </div>
                         <div>
                             <div class="color-highlight size-h3">{{ $column.PercentBlocked }}%</div>
-                            <div class="size-h6">BLOCKED</div>
+                            <div class="size-h6">ЗАБЛОКИРОВАНО</div>
                         </div>
                     </div>
                 </div>
